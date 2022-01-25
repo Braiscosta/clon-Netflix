@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  background-color: #141414;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.row-container {
+  padding-bottom: 100px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: #000;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.loading img {
+  width: 90%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.movie-img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.movie-img-large {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.video-container {
+  height: 0px;
+  width: 100%;
+  padding-top: 56.25%; /* Relación: 16/9 = 56.25% */
+  position: relative;
+  z-index: 90;
+  border-radius: 10px 10px 0px 0px;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  border-radius: 10px 10px 0px 0px;
+  animation-name: opacidad;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  transform: scale(2);
+}
+
+.video-container-large {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  padding-top: 0;
+  position: relative;
+  z-index: 90;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.video-container-large iframe {
+  height: 100vh;
+  width: 100vw;
+  border-radius: 10px 10px 0px 0px;
+  animation-name: opacidad;
+  animation-timing-function: ease;
+  animation-duration: 1.5s;
+}
+
+@keyframes opacidad {
+  0% {
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    opacity: 0;
   }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.movie-name {
+  font-weight: bold;
+}
+
+.info-flex {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.movie-points,
+.movie-year {
+  display: inline-block;
+  margin-right: 15px;
+  margin-top: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.info-button {
+  width: 20px;
+}
+
+.info-button img {
+  width: 100%;
+}
+
+.movie-points {
+  color: #46d369;
 }

@@ -1,0 +1,26 @@
+.content {
+  display: flex;
+}
+
+.top {
+  width: 50%;
+  font-size: 50px;
+  color: white;
+}
+
+.top img {
+  width: 100%;
+}
+
+.top-img {
+  width: 50%;
+}
+
+.slider-img {
+  width: 100%;
+  border-radius: 4px;
+}
+.slider-img-large {
+  height: 100%;
+  border-radius: 5px;
+}

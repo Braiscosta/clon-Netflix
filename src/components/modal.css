@@ -1,0 +1,118 @@
+.modal-mini {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  z-index: 80;
+  background-color: #181818;
+  cursor: pointer;
+  border-radius: 10px;
+  color: white;
+  transition: transform 0.3s ease;
+  box-shadow: rgb(0 0 0 / 75%) 0px 3px 10px;
+
+  /* animation-name: opacidad;
+  animation-timing-function: ease-out;
+  animation-duration: 5s; */
+}
+
+/* @keyframes opacidad {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  75% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+} */
+
+.modal-mini-large {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  z-index: 80;
+  background-color: #181818;
+  cursor: pointer;
+  border-radius: 10px;
+  color: white;
+  opacity: 1;
+  transition: transform 0.3s ease;
+  box-shadow: rgb(0 0 0 / 75%) 0px 3px 10px;
+}
+
+.modal-top {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  z-index: 80;
+  background-color: #181818;
+  cursor: pointer;
+  border-radius: 10px;
+  color: white;
+  transition: transform 0.3s ease;
+  box-shadow: rgb(0 0 0 / 75%) 0px 3px 10px;
+
+  /* animation-name: opacidad;
+  animation-timing-function: ease-out;
+  animation-duration: 5s; */
+}
+
+.modal-mini:hover {
+  transform: scale(1.4) translateY(-5%);
+}
+
+.modal-top:hover {
+  transform: scale(1.4);
+}
+
+.first-slide:hover {
+  transform: translate(20%) scale(1.4) translateY(-5%);
+}
+
+.last-slide:hover {
+  transform: translate(-20%) scale(1.4) translateY(-5%);
+}
+
+.modal-mini-large:hover {
+  transform: scale(1.1);
+}
+
+.description-container {
+  padding: 10px;
+}
+
+.description-container-large {
+  background-color: transparent;
+  position: absolute;
+  bottom: 0px;
+  z-index: 99;
+  padding: 10px;
+}
+
+.arrow-box {
+  background: rgb(185, 185, 185);
+  margin-left: 20px;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.arrow-box::after {
+  content: "";
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  top: 10px;
+  left: -20px;
+  border-width: 10px;
+  border-color: transparent white transparent transparent;
+  border-style: solid;
+}
